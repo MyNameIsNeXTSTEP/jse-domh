@@ -6,6 +6,7 @@ Plain JS easy DOM handler is a tool for handling operation on DOM elements by qu
 - The idea is about to implement it as assembly like insctructions or objectionary like composition structure, then return a read to go vanilla JS script
 
 Seems to me to be something like:
+(How much is this necessary and in what form, for what tasks - this question is still not completely clear)*
 
 1.
 ```
