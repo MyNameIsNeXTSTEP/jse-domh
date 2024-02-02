@@ -3,4 +3,25 @@ Plain JS easy DOM handler is a tool for handling operation on DOM elements by qu
 
 ## Objectives
 - Let a programmer quickly create and run declarative and relatively short script to handle DOM elements
-- The idea is about to implement it as assembly like insctructions or objectionary like composition structure
+- The idea is about to implement it as assembly like insctructions or objectionary like composition structure, then return a read to go vanilla JS script
+
+Seems to me to be something like:
+1. ```
+CREATE div 'block-1' WITH_STYLES './styles.css'
+CREATE span 'button text' name 'submit-button-text' in 'block-1'
+WRAP 'submit-button-text' with button 'submit-button'
+ONCLICK submit-button go alert('test')
+ADD_SCRIPT './script.js'
+```
+2. ```
+(jse-domh.js)
+new DomElement(
+    'block-1',
+    new Div(
+        new Button(
+            'submit-button',
+             new Span('button text', 'submit-button-text')
+        ).onClick(() => alert('test'))
+  ).withStyles('./styles.css')
+).addScript('./script.js')
+```
